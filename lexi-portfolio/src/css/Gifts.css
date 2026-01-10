@@ -1,0 +1,227 @@
+/* --- Global Styles --- */
+.shop-container {
+  font-family: "Poppins", sans-serif;
+  color: #000; /* Unified black text */
+  background: linear-gradient(180deg, #f8fafc 0%, #ecfdf5 50%, #f5fdf9 100%);
+  overflow-x: hidden;
+}
+
+/* Remove underline globally */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Hero Video Section --- */
+.hero-video {
+  position: relative;
+  height: 80vh;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  margin-top: 80px; /* below navbar */
+  z-index: 0;
+}
+
+
+.hero-video iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%; /* centers vertically */
+  left: 50%; /* centers horizontally */
+  transform: translate(-50%, -50%); /* perfect centering */
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 0 1.5rem;
+  width: 90%;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.hero-btn {
+  background: #ffffff;
+  color: #2a9946;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #2a9946;
+  color: #fff;
+}
+
+/* --- Featured Section --- */
+.featured-section {
+  max-width: 1300px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 40px;
+  align-items: stretch;
+}
+
+.featured-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  color: #000;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  background-color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.featured-content {
+  padding: 1.5rem;
+}
+
+.featured-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.featured-content p {
+  color: #222;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* --- Profile Card --- */
+.profile-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  text-align: center;
+  color: #000;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #2a9946;
+  margin-bottom: 1rem;
+}
+
+.profile-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.profile-card p {
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.profile-link {
+  display: block;
+  font-weight: 600;
+  color: #2a9946;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.profile-link:hover {
+  color: #1a7034;
+}
+
+/* --- Info Cards Section --- */
+.cards-section {
+  max-width: 1300px;
+  margin: 60px auto 100px auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.info-card-content h3 {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.info-card-content p {
+  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #2a9946;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.read-more:hover {
+  color: #1a7034;
+}

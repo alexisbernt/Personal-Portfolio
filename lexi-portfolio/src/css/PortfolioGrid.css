@@ -1,0 +1,141 @@
+:root {
+  --blue-main: #1a73e8;
+  --blue-dark: #0f4db3;
+  --blue-light: #e8f1ff;
+  --bg-gradient: radial-gradient(circle at top right, #1a73e8, #0f4db3, #061a33, #000);
+  --text-light: #1a1c1f;
+  --text-dim: #c8d6f2;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
+}
+
+/* Page Background */
+.portfolio-container {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Section Title */
+.section-header {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Project Card */
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 1.4rem;
+  backdrop-filter: blur(12px);
+  transition: 0.35s ease;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.33);
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.project-desc {
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* Buttons */
+.project-btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 12px;
+  background: var(--blue-main);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.project-btn:hover {
+  background: var(--blue-dark);
+}
+
+/* Animations */
+.fade-in { animation: fadeIn 1s ease forwards; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up { animation: slideUp 0.9s ease forwards; }
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ===========================
+   Mobile Responsiveness
+   =========================== */
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1.2rem;
+  }
+
+  .section-header {
+    font-size: 2rem;
+  }
+
+  /* Stack the header section */
+  .header-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* Bio card spacing */
+  .profile-card {
+    text-align: center;
+  }
+
+  .profile-card img {
+    margin: 0 auto;
+  }
+
+  /* Card text scaling */
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    font-size: 1.7rem;
+  }
+
+  .project-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
