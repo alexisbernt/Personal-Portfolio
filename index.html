@@ -45,7 +45,6 @@
       font-size: 28px;
       font-style: italic;
       font-weight: 600;
-      text-transform: lowercase;
     }
 
     .tracker-wrapper {
@@ -174,7 +173,6 @@
         <!-- Math -->
         <tr>
           <td class="habit-name">Math</td>
-
           <td><input type="checkbox"></td>
           <td><input type="checkbox"></td>
           <td><input type="checkbox"></td>
@@ -203,7 +201,6 @@
         <!-- Self Care -->
         <tr>
           <td class="habit-name">Self/Skin Care</td>
-
           <td><input type="checkbox"></td>
           <td><input type="checkbox"></td>
           <td><input type="checkbox"></td>
@@ -232,7 +229,6 @@
         <!-- Helping Others -->
         <tr>
           <td class="habit-name">New Project/Helping Others</td>
-
           <td><input type="checkbox"></td>
           <td><input type="checkbox"></td>
           <td><input type="checkbox"></td>
@@ -261,7 +257,6 @@
         <!-- Workouts -->
         <tr>
           <td class="habit-name">Workouts</td>
-
           <td><input type="checkbox"></td>
           <td><input type="checkbox"></td>
           <td><input type="checkbox"></td>
@@ -292,6 +287,29 @@
     </div>
 
   </div>
+
+  <script>
+    // Select all checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    // Load saved checkbox states
+    window.addEventListener('load', () => {
+      checkboxes.forEach((checkbox, index) => {
+        const saved = localStorage.getItem('checkbox-' + index);
+
+        if (saved === 'true') {
+          checkbox.checked = true;
+        }
+      });
+    });
+
+    // Save checkbox states when changed
+    checkboxes.forEach((checkbox, index) => {
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem('checkbox-' + index, checkbox.checked);
+      });
+    });
+  </script>
 
 </body>
 </html>
