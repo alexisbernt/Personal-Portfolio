@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alexis' 2026 Habit Tracker</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #d8e5dc;
+      color: #1d35ff;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      padding: 20px 40px 60px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 72px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      font-family: Georgia, serif;
+      letter-spacing: -2px;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      gap: 20px;
+    }
+
+    .category {
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 600;
+      text-transform: lowercase;
+    }
+
+    .tracker-wrapper {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      background: rgba(255,255,255,0.4);
+      padding: 25px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th {
+      background: #1d35ff;
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+    }
+
+    td {
+      border: 1px solid #d6d6d6;
+      padding: 12px;
+      text-align: center;
+      min-width: 100px;
+    }
+
+    .habit-name {
+      text-align: left;
+      font-weight: bold;
+      color: #1d35ff;
+      background: #f7f7f7;
+      min-width: 240px;
+    }
+
+    .week-header {
+      background: #dfe4ff;
+      color: #1d35ff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    input[type="checkbox"] {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      accent-color: #1d35ff;
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 44px;
+      }
+
+      .category {
+        font-size: 18px;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="title">
+      Alexis' 2026 Habit Tracker
+    </div>
+
+    <div class="categories">
+      <div class="category">Math</div>
+      <div class="category">Self/Skin Care</div>
+      <div class="category">New Project/Helping Others</div>
+      <div class="category">Workouts</div>
+    </div>
+
+    <div class="tracker-wrapper">
+
+      <table>
+
+        <tr>
+          <th class="habit-name">Habit</th>
+          <th colspan="5" class="week-header">Week 1</th>
+          <th colspan="5" class="week-header">Week 2</th>
+          <th colspan="5" class="week-header">Week 3</th>
+          <th colspan="5" class="week-header">Week 4</th>
+        </tr>
+
+        <tr>
+          <th class="habit-name"></th>
+
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+        </tr>
+
+        <!-- Math -->
+        <tr>
+          <td class="habit-name">Math</td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+        </tr>
+
+        <!-- Self Care -->
+        <tr>
+          <td class="habit-name">Self/Skin Care</td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+        </tr>
+
+        <!-- Helping Others -->
+        <tr>
+          <td class="habit-name">New Project/Helping Others</td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+        </tr>
+
+        <!-- Workouts -->
+        <tr>
+          <td class="habit-name">Workouts</td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+          <td><input type="checkbox"></td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
